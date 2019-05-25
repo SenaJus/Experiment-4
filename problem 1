@@ -1,0 +1,74 @@
+#include <iostream> 
+#include<iomanip> 
+#include <cstdlib> 
+using namespace std;
+
+void dm()  
+{ 
+cout<<"MENU: "<<endl; 
+cout<<"1.Add"<<endl; 
+cout<<"2.Subtract"<<endl; 
+cout<<"3.Multiply"<<endl; 
+cout<<"4.Divide"<<endl; 
+cout<<"5.Modulus"<<endl; 
+} 
+int add(int a,int b)
+{ 
+    return(a+b); 
+} 
+int substract(int a, int b)
+{ 
+    return(a-b); 
+} 
+int multiply(int a, int b)
+{ 
+    return(a*b); 
+} 
+float divide(int a,int b)
+{ 
+      return(a/b); 
+} 
+int Modulus(int a, int b)
+{ 
+    return(a%b); 
+} 
+int main() 
+{
+dm(); 
+int yc, a, b; 
+char c; 
+do
+{ 
+cout<<"Enter your choice from 1 t0 5:"; 
+cin>>yc; 
+cout<<"Enter first number: "; 
+cin>>a;
+cout<< "Enter second number: ";
+cin>>b;
+cout<<"\n"; 
+switch(yc)
+{ 
+ case 1:
+cout<<"Result:"<<add(a,b)<<endl;
+break; 
+ case 2:
+cout<<"Result:"<<substract(a,b)<<endl;
+break; 
+ case 3:
+cout<<"Result:"<<multiply(a,b)<<endl;
+break; 
+ case 4:
+cout<<"Result:"<<divide(a,b)<<endl;
+break; 
+ case 5:
+cout<<"Result:"<< Modulus(a,b)<<endl;
+break; 
+ default:cout<<"invalid"<<endl; 
+} 
+cout<<"press y if you wish to continiue."<<endl;                
+cout<<"\nContinue?"; 
+       cin>>c; 
+}while(c=='y'); 
+ 
+   return 0; 
+}
