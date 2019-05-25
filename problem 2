@@ -1,0 +1,42 @@
+#include <iostream>
+using namespace std;
+
+int main ()
+{
+	int i, j, n, v, numbers[100];
+
+	
+	cout << "enter array size:";
+	cin >> i;	
+	cout << "enter 5 elements:"<<endl;
+
+	for (j = 0; j < i; j++)
+	{
+	cin >> numbers[j];
+	}
+	cout<<"\nyour data:\n ";
+	for(i=0;i<j;i++)
+	{
+	cout<<numbers[i];
+	}
+	for (j = 0; j < i; j++)
+	{
+	for(n = (j + 1); n < i; n++)
+	{
+	if(numbers[j] > numbers[n])
+	{
+	v = numbers[j];
+	numbers[j] = numbers[n];
+	numbers[n] = v;
+	}
+	}
+	}
+	
+	cout << "\nafter sorting:\n";
+	for(j = 0; j < i; j++)
+	{
+		cout << numbers[j] << " ";
+	}
+	
+	return 0;
+}
